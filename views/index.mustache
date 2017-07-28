@@ -5,11 +5,22 @@
     <title>To Do List</title>
   </head>
   <body>
-<form class="" action="/" method="post">
+    <h2>Add Todo's here!</h2>
+<form class="" action="/add" method="post">
   <input type="text" name="todo" value="">
   <button type="submit" name="addtodo">Add ToDo</button>
   <br>
-  <p><button type="submit" name="complete">Mark as Complete</button>{{todo}}</p>
 </form>
+<h3>Open Todo's</h3>
+{{#todos}}
+<form class="" action="/completed" method="post">
+  <p><button type="submit" name="mark">Mark as Complete</button>
+    <input type="text" name="marked" value="{{.}}"></p>
+</form>
+{{/todos}}
+<h3>Completed tasks</h3>
+{{#completed}}
+<p><strike>{{.}}</strike></p>
+{{/completed}}
   </body>
 </html>
