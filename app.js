@@ -3,8 +3,6 @@ const mustacheExpress = require('mustache-express');
 const app = express();
 const bodyParser = require('body-parser');
 const expressSession = require('express-session');
-var todos = [];
-var completed = [];
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
