@@ -12,15 +12,15 @@
   <br>
 </form>
 <h3>Open Todo's</h3>
-{{#todos}}
+{{#todosOpen}}
 <form class="" action="/completed" method="post">
   <p><button type="submit" name="mark">Mark as Complete</button>
     <input type="text" name="marked" value="{{.}}"></p>
 </form>
-{{/todos}}
+{{/todosOpen}}
 <h3>Completed tasks</h3>
-{{#completed}}
+{{#todosCompleted}}
 <p><strike>{{.}}</strike></p>
-{{/completed}}
+{{/todosCompleted}}
   </body>
 </html>
